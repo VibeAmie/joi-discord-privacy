@@ -18,7 +18,8 @@ attached to them, across all channels in the server. This is necessary
 to detect spam, scams, phishing and compromised accounts, which can
 appear in any channel.
 
-Neither bot reads direct messages between members.
+Neither bot reads message content in any other server. Neither bot
+reads direct messages between members.
 
 ## Where it goes
 
@@ -28,14 +29,18 @@ commercial terms as our service provider.
 
 For Bootler, most messages never reach Anthropic: messages matching our
 local spam patterns are handled without any external call, and messages
-from bots, staff and trusted members are excluded before analysis.
+from bots and staff are excluded before analysis.
 
 We do not share message content with advertisers, data brokers, or any
 other third party.
 
+We process this data to operate and moderate our community, and to
+provide support to members.
+
 ## What we keep
 
-We do not store raw message text.
+We do not retain the full text of members' messages. Specific
+exceptions are described below.
 
 **Healper** stores question-and-answer entries in an internal knowledge
 base. These are summaries written by the language model or by staff,
@@ -44,11 +49,12 @@ Each entry records the approving staff member's Discord ID and a link
 back to the source message. The asking member's username and Discord ID
 are not stored. Entries are kept until staff delete them.
 
-**Bootler** stores spam patterns that a moderator has explicitly taught
-it: a hash of the message text, extracted words and web domains,
-perceptual hashes of any images or video, and a small thumbnail image.
-The Discord ID of the moderator who taught the pattern is recorded; the
-Discord ID of the person who posted the spam is not. Patterns are kept
+**Bootler** stores records of spam content that a moderator has
+explicitly flagged, so the same content can be recognised if it is
+posted again. These records contain derived signatures rather than the
+original message, along with a reduced-size copy of any image involved.
+The Discord ID of the moderator who flagged the content is recorded;
+the Discord ID of the person who posted it is not. Records are kept
 until a moderator deletes them.
 
 Moderation actions are logged to a private moderator-only channel within
@@ -58,7 +64,7 @@ moderators clear them.
 
 Token usage accounting is kept for 30 days and contains no message text.
 
-## Your choices
+## Your rights and how to contact us
 
 To request deletion of data relating to you, or to ask what we hold,
 contact support@joi.com or open a ticket in the server and tag @joi_ai.
