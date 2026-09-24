@@ -18,8 +18,7 @@ attached to them, across all channels in the server. This is necessary
 to detect spam, scams, phishing and compromised accounts, which can
 appear in any channel.
 
-Neither bot reads message content in any other server. Neither bot
-reads direct messages between members.
+Neither bot reads direct messages between members.
 
 ## Where it goes
 
